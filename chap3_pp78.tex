@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt,uplatex]{jsarticle}
+\usepackage{report}
+\renewcommand{\thesection}{3-\arabic{section}}
+\title{Chapter3}
+\author{20B01392 松本侑真}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+
+\end{abstract}
+\tableofcontents
+\newpage
+
+\setcounter{section}{5}
+\section{Yukawa Theory of Nuclear Interaction}
+湯川が1934年に提唱した中間子の交換というアイデアは、以前の章の対称的な議論を通して得られたものを超えて、
+核子間相互作用を調べるのには良いスタート地点である。
+湯川の描像では、2つの核子間の相互作用は中間子の交換によって仲介される。
+クォークの構造が根底にある、ハドロンの量子的な繋がりを率直に描いてはいないが、
+その理論は中間子と核子間相互作用の強さのように、核子の相互作用を他のいろいろなハドロン原子の過程に結びつけることができる。
+より実証的なレベルでは、湯川のアイデアは核子のポテンシャルの距離依存性の合理的なモデルを提供してくれる。
+そのような表現は、例えば、半経験的なアプローチ方法として使えるかもしれない。
+本章における焦点は、主に中間子交換のアイデアの起源そのものである。
+応用については最終章に残すことにして、核子-核子散乱から提供される実験的な情報を最初に確認する。
+
+ボソンの交換に基づくポテンシャルの適切な導出は、今扱っている範疇を超えている、相対論的な場の量子論を扱う必要がある。
+しかしながら、そのエッセンスは古典的な電気力学とのアナロジーを考えることで得られる。
+湧き出しのない場所の静電ポテンシャル$\phi(\bm{r})$は、ラプラス方程式の解となっている：
+\begin{equation}
+  \laplacian\phi(\bm{r})=0\;。
+\end{equation}
+電荷$q$の点電荷が原点に存在しているとき、方程式は
+\begin{equation}
+  \laplacian\phi(\bm{r})=-\qty[\frac{1}{4\pi\varepsilon_0}]4\pi q\delta(\bm{r})
+  \label{eq:poisson}
+\end{equation}
+となる。この解として、良く知られているクーロンポテンシャルが得られる：
+\begin{equation}
+  \phi(\bm{r})=\qty[\frac{1}{4\pi\varepsilon_0}]\frac{q}{r}\;。
+\end{equation}
+電磁場が量子化されるとき、場の量子として光子が出現し、電荷は場の源となる。（どういう意味ですか？）
+\vskip\baselineskip
+\begin{tcolorbox}[
+    colback = white,
+    colframe = green!35!black,
+    fonttitle = \bfseries]
+  \begin{theorem}[Poisson方程式の解]
+    一般に、Poisson方程式は
+    \begin{equation}
+      \laplacian u(\bm{r})=-f(\bm{r})
+    \end{equation}
+    と表される。このとき、解は
+    \begin{equation}
+      u(\bm{r})=\frac{1}{4\pi}\iiint d^3\bm{r}'\,\frac{f(\bm{r}')}{\abs{\bm{r}-\bm{r}'}}
+    \end{equation}
+    である。
+  \end{theorem}
+\end{tcolorbox}
+核力は電磁気的な力とは異なる点がいくつかある。
+恐らく最も重要な点は、それが短距離力ということであり、次章でそれを支持する証拠を確認する。
+今は、短距離の核ポテンシャルに対する場の量子論における類似物である
+式\eqref{eq:poisson}と似た式の問題を主に考えることにする。
+考える式は、相対論的極限でも成立するために、ローレンツ共変でなければならない。
+シュレディンガー方程式は非相対論的極限でのみ適用されるため、このルールを満たしていない。
+
+aaaa
+
+\end{document}

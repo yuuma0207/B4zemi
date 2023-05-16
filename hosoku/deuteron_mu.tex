@@ -1,0 +1,103 @@
+%ctrl+alt+m：open Math Preview
+\documentclass[a4paper,11pt,uplatex]{jsarticle}%titlepage
+%:/usr/local/texlive/texmf-local/tex/latex/report/report.sty
+\usepackage{report}
+\newcommand{\kket}[2]{\ket{#1}\!\ket{#2}}
+\newcommand{\bbra}[2]{\bra{#1}\!\bra{#2}}
+\title{重粒子の磁気モーメントの期待値計算について}
+\date{\today}
+\begin{document}
+\maketitle
+\vskip\baselineskip
+\begin{tcolorbox}[
+    colback = white,
+    colframe = green!35!black,
+    fonttitle = \bfseries]
+  \begin{theorem}[トリプレット状態におけるスピン演算子の考察]
+    陽子と中性子のスピン演算子を$\va{s}_p,\,\va{s}_n$とする。
+    重陽子はトリプレットなので、
+    \begin{equation}
+      \ket{S}=\kket{u}{u},\quad\frac{1}{2}\qty(\kket{u}{d}+\kket{d}{u}),\quad\kket{d}{d}
+    \end{equation}
+    に対して$\ev{\va{s}_p-\va{s}_n}{S}=0$が成立する。
+  \end{theorem}
+\end{tcolorbox}
+
+\subsection*{証明の方針}
+昇降演算子を用いて
+\begin{equation}
+  s_{px} = \frac{1}{2}\qty(s_{p+}+s_{p-}),\,s_{py}=\frac{1}{2i}\qty(s_{p+}-s_{p-})
+\end{equation}
+としてから全ての状態に対して計算すると、$\ev{\va{s}_p-\va{s}_n}{S}=0$が言える。
+
+\section{定理の拡張}
+ここでは、上の定理の一般化を行う。
+粒子$X_i$のHilbert空間を$\mathcal{H}_i$、粒子$X_j$のHilbert空間を$\mathcal{H}_j$とする。
+また、2つのHilbert空間は同じ構造を持っていると仮定する。
+以降、$\mathcal{H}_i,\,\mathcal{H}_j$を$\mathcal{H}_{\text{single}}$と書く。
+（例：陽子と中性子は異なる粒子だが、それらのスピンが持つHilbert空間は同じである。）
+
+2個の粒子$X_i,\,X_j$が作るHilbert空間$\mathcal{H}=\mathcal{H}_i\otimes\mathcal{H}_j$において、粒子$X_i$と粒子$X_j$の状態の入れ替えに対する考察を行う。
+Hilbert空間$\mathcal{H}$上のエルミート演算子の集合を$\mathcal{O}(\mathcal{H})$とし、$\hat{A}\in\mathcal{O}(\mathcal{H})$
+は物理的な観測量を表す演算子とする。
+\vskip\baselineskip
+\begin{tcolorbox}[
+    colback = white,
+    colframe = green!35!black,
+    fonttitle = \bfseries]
+  \begin{theorem}[]
+    物理量$A$に対応する粒子$X_i$と$X_j$の演算子を
+    $\hat{A}_i\in\mathcal{O}(\mathcal{H}_{\text{single}}),\,\hat{A}_j\in\mathcal{O}(\mathcal{H}_{\text{single}})$とする。
+    このとき、$\ket{\Psi_s}\in \mathcal{H}$が物理量$A$に対する粒子$X_i,\,X_j$の状態の入れ替えに対して対称化されている場合、
+    \begin{equation}
+      \ev{\hat{A}_i-\hat{A}_j}{\Psi_s} = 0
+    \end{equation}
+    が成立する。
+  \end{theorem}
+\end{tcolorbox}
+\vskip\baselineskip
+
+\subsection*{証明}
+2粒子の状態の入れ替えを行う演算子を$\hat{P}$とする。$\ket{\Psi}\in\mathcal{H}$に対して、
+\begin{equation}
+  \hat{P}\ket{\Psi} = \pm\ket{\Psi},\,\hat{P}^2=\text{id}\,\text{（恒等演算子）}
+\end{equation}
+となるため、$\hat{P}$はユニタリ演算子である。また、定義より
+\begin{equation}
+  \hat{P}\ket{\Psi_s}=\ket{\Psi_s}
+\end{equation}
+が成立する。
+次に、反交換関係$\qty{\hat{P},\,\hat{A}_i-\hat{A}_j}=0$が成立することを示す。
+まず、
+\begin{equation}
+  \ket{A_{\alpha}}_i,\quad(\alpha=1,\,2,\,\cdots,\,N)
+\end{equation}
+を$\hat{A}_i$の固有状態とする。これらは完全系を成していると仮定し、$\hat{A}_j$の固有状態についても同様に定める。
+すなわち、任意の$\ket{\Psi}\in\mathcal{H}$は
+\begin{equation}
+  \ket{\Psi} = \sum_{\alpha=1}^N\sum_{\beta=1}^N C_{\alpha,\,\beta}\ket{A_\alpha}_i\!\ket{A_\beta}_j
+\end{equation}
+と展開できる。したがって、
+\begin{align}
+  \hat{P}(\hat{A}_i-\hat{A}_j)\ket{\Psi} & = \hat{P}(\hat{A}_i-\hat{A}_j)\sum_{\alpha=1}^N\sum_{\beta=1}^N C_{\alpha,\,\beta}\ket{A_\alpha}_i\!\ket{A_\beta}_j
+  =\sum_{\alpha,\,\beta} (A_\alpha-A_\beta)\hat{P}C_{\alpha,\,\beta}\ket{A_\alpha}_i\!\ket{A_\beta}_j \notag                                                   \\
+                                         & = \sum_{\alpha,\,\beta} (A_\alpha-A_\beta)C_{\alpha,\,\beta}\ket{A_\beta}_i\!\ket{A_\alpha}_j
+\end{align}
+となる。また、
+\begin{align}
+  (\hat{A}_i-\hat{A}_j)\hat{P}\ket{\Psi} & = (\hat{A}_i-\hat{A}_j)\sum_{\alpha=1}^N\sum_{\beta=1}^N \hat{P}C_{\alpha,\,\beta}\ket{A_\alpha}_i\!\ket{A_\beta}_j
+  = (\hat{A}_i-\hat{A}_j)\sum_{\alpha,\,\beta}C_{\alpha,\,\beta}\ket{A_\beta}_i\!\ket{A_\alpha}_j \notag                                                       \\
+                                         & =\sum_{\alpha,\,\beta} (A_\beta-A_\alpha)C_{\alpha,\,\beta}\ket{A_\beta}_i\!\ket{A_\alpha}_j
+\end{align}
+となるため、反交換関係$\qty{\hat{P},\,\hat{A}_i-\hat{A}_j}=0$が成立する。以上より、
+\begin{equation}
+  \ev{\hat{A}_i-\hat{A}_j}{\Psi_s} = \ev{\hat{P}^{\dagger}\hat{P}(\hat{A}_i-\hat{A}_j)\hat{P}^{\dagger}\hat{P}}{\Psi_s}
+  = -\ev{\hat{A}_i-\hat{A}_j}{\Psi_s} = 0
+\end{equation}
+を得る。
+
+
+
+
+
+\end{document}

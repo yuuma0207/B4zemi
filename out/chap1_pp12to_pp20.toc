@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1-1}General Properties of Nuclei}{2}{section.1}%
+\contentsline {subsection}{\numberline {1}Nuclear radius and nuclear density}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {2}Nuclear shape}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3}Density of excited states}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {4}Scattering cross section}{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {5}補足：量子論的な微分散乱断面積の定義について}{8}{subsection.3.5}%
+\contentsline {subsection}{\numberline {6}Reaction types}{9}{subsection.3.6}%
+\contentsline {section}{\numberline {1-4}Commonly Used Units and Constants}{11}{section.4}%
+\contentsline {section}{\numberline {1-5}章末問題}{14}{section.5}%
+\contentsline {section}{\numberline {1-6}補足：励起状態の状態密度の計算について}{20}{section.6}%
