@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  16 MAY 2023 18:44
+This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  20 MAY 2023 19:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1262,24 +1262,24 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 4.62341pt on input line 29.
 LaTeX Font Info:    Font shape `JT2/hmc/bx/n' in size <10> not available
-(Font)              Font shape `JT2/hgt/m/n' tried instead on input line 48.
+(Font)              Font shape `JT2/hgt/m/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `JT2/hgt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 48.
+(Font)              scaled to size 9.24683pt on input line 49.
 LaTeX Font Info:    Font shape `JY2/hmc/bx/n' in size <10> not available
-(Font)              Font shape `JY2/hgt/m/n' tried instead on input line 48.
+(Font)              Font shape `JY2/hgt/m/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `JY2/hgt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 48.
-[2] (out/chap3_pp78.aux)
+(Font)              scaled to size 9.24683pt on input line 49.
+[2] [3] (out/chap3_pp78.aux)
 Package rerunfilecheck Info: File `chap3_pp78.out' has not changed.
 (rerunfilecheck)             Checksum: 18A98768AEAE8FAA3D0490C23485CF9F;289.
  ) 
 Here is how much of TeX's memory you used:
- 38242 strings out of 475422
- 776387 string characters out of 5788032
- 1127240 words of memory out of 5000000
- 59403 multiletter control sequences out of 15000+600000
+ 38243 strings out of 475422
+ 776398 string characters out of 5788032
+ 1128306 words of memory out of 5000000
+ 59404 multiletter control sequences out of 15000+600000
  522485 words of font info for 135 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 99i,7n,94p,505b,1246s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,7n,94p,505b,1252s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/chap3_pp78.dvi (2 pages, 9596 bytes).
+Output written on out/chap3_pp78.dvi (3 pages, 12604 bytes).
