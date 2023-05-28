@@ -39,6 +39,7 @@
 となる。この解として、良く知られているクーロンポテンシャルが得られる：
 \begin{equation}
   \phi(\bm{r})=\qty[\frac{1}{4\pi\varepsilon_0}]\frac{q}{r}\;。
+  \label{eq:3-59}
 \end{equation}
 電磁場が量子化されるとき、場の量子として光子が出現し、電荷は場の源となる。（どういう意味ですか？）
 \vskip\baselineskip
@@ -68,21 +69,86 @@
 フェルミオンは一方で、その反粒子とともに生成消滅する。ディラック方程式はスピン$1/2$の粒子（言い換えれば、フェルミオン）を記述する方程式であるため不適当である。
 第一候補としては、クライン・ゴルドン方程式が残されている。
 
-相対論的なエネルギー運動量関係は、式
+相対論的なエネルギー運動量関係は、
 \begin{equation}
   E^2=p^2c^2+m^2c^4
 \end{equation}
 で与えられる。
-エネルギー$E$を演算子$i\hbar(\pdv*{t})$に、運動量$\bm{p}$を演算子$-i\hbar\grad$に置き換えることで
-非相対論的な量子力学を得たように、同様の方法でクライン・ゴルドン方程式を量子化することができる：
+エネルギー$E$を演算子$i\hbar(\pdv*{t})$に、運動量$\bm{p}$を演算子$-i\hbar\grad$に置き換えることで、
+非相対論的な量子力学を得たときと同様の方法で量子化することができる：
 \begin{equation}
   -\hbar^2\pdv[2]{t}\phi(\bm{r}) = \qty(-\hbar^2c^2\laplacian + m^2c^4)\phi(\bm{r})\;。
 \end{equation}
-ここで、$m$は場の量子の質量とする。両辺に$(\hbar c)^2$をかけて整理すると、クライン・ゴルドン方程式に似た方程式を得る：
+ここで、$m$は場の量子の質量とする。両辺に$(\hbar c)^2$をかけて整理すると、良く知られたクライン・ゴルドン方程式を得る：
 \begin{equation}
   \qty(\laplacian - \frac{1}{c^2}\pdv[2]{t})\phi(\bm{r}) = \frac{m^2c^2}{\hbar^2}\phi(\bm{r})\;。
+  \label{eq:3-61}
 \end{equation}
-これは、式\eqref{eq:laplas}のアナロジーにすぎず、場の量子のソース項はまだ含まれていない。
+これは、場の量子のソース項はまだ含まれていないため、式\eqref{eq:laplas}のアナロジーにすぎない。
+この点は、場の量子の質量$m$をゼロにして、時間依存性を無視することでさらに実証されるかもしれない。
+その結果は、式\eqref{eq:laplas}と同じである。
+
+湧き出しを含めるためには、式\eqref{eq:3-61}にソース項を追加して、ポアソン方程式\eqref{eq:poisson}に相当するものを求める必要がある。
+簡単化のため、静止限界(static limit)のみを考えて、時間微分を含む項を無視する。
+原点に強さが$g$の点源があるとき、
+\begin{equation}
+  \laplacian\phi(\bm{r}) = \frac{m^2c^2}{\hbar^2}\phi(\bm{r}) - g\delta(\bm{r})
+  \label{eq:3-69}
+\end{equation}
+を得る。この式の解
+\begin{equation}
+  \phi(\bm{r})=\frac{g}{4\pi r}e^{-mcr/\hbar}
+\end{equation}
+は、湯川ポテンシャルの形として良く知られており、$m=0,\,g=\qty[(4\pi\varepsilon_0)^{-1}]4\pi q$とすることで、
+式\eqref{eq:3-59}に帰着できる。
+一方で、もし場の量子に有限の質量があると、ポテンシャルの強さが$r_0=\hbar/mc$で$1/e$倍に落ちることがわかる。
+$r_0$は、質量$m$のボソンが仲介する力の範囲の尺度として捉えることができる。パイ中間子($m\sim \SI{140}{MeV/c^2}$)では、
+$r_0$の値はおよそ\SI{1.4}{fm}である。後で見るように、1つのパイ中間子の交換は、核力ポテンシャルの長距離部分をよく表現している。
+
+\vskip\baselineskip
+\begin{tcolorbox}[
+    colback = white,
+    colframe = green!35!black,
+    fonttitle = \bfseries]
+  \begin{theorem}[湯川ポテンシャルの導出]
+    点源がある場合のクライン・ゴルドン方程式
+    \begin{equation}
+      \laplacian\phi(\bm{r}) = \frac{m^2c^2}{\hbar^2}\phi(\bm{r}) - g\delta(\bm{r})
+    \end{equation}
+    のFourier変換を考える。
+    以下では、関数$f(\bm{r})$のFourier変換を
+    \begin{equation}
+      \mathcal{F}[f]\coloneqq \frac{1}{(2\pi)^3}\int_{-\infty}^{\infty} d^3\bm{r} f(\bm{r})e^{-i\bm{k}\cdot\bm{r}}
+    \end{equation}
+    と定義する。
+    $\mathcal{F}[\laplacian f] = -\abs{\bm{k}}^2\mathcal{F}[f]$
+    となることは部分積分から容易に示すことができるため、式\eqref{eq:3-69}の両辺をFourier変換すると
+    \begin{equation}
+      \mathcal{F}[\phi] = \frac{g}{(2\pi)^3}\frac{1}{k^2+m^2c^2/\hbar^2}
+    \end{equation}
+    となる。したがって、逆Fourier変換は以下のようになる：
+    \begin{equation}
+      \phi(\bm{r}) = \frac{g}{(2\pi)^3}\int_0^\infty dk\frac{k^2}{k^2+m^2c^2/\hbar^2}\int_{-1}^{1}d(\cos\theta) e^{ikr\cos\theta}\int_{0}^{2\pi}d\varphi \,。
+    \end{equation}
+    \begin{equation}
+      \int_{-1}^{1}d(\cos\theta) e^{ikr\cos\theta} = \frac{1}{ikr}\qty[e^{ikr} - e^{-ikr}]
+    \end{equation}
+    となり、第二項目は第一項目で$k\to-k$とした場合に対応しているため、
+    \begin{equation}
+      \phi(\bm{r}) = \frac{g}{(2\pi)^2ir}\int_{-\infty}^{\infty}dk\frac{ke^{ikr}}{k^2+m^2c^2/\hbar^2}
+    \end{equation}
+    となる。$r>0$であるため、複素平面の上半分を通る半径$R$の半円経路を考えると、$R\to\infty$で半円上での積分は$0$に収束する。したがって、
+    \begin{equation}
+      \phi(\bm{r}) = \left.\frac{g}{2\pi r}\frac{ke^{ikr}}{(k^2+m^2c^2/\hbar^2)'}\right|_{k=imc/\hbar} = \frac{g}{4\pi r}e^{-mcr/\hbar}
+    \end{equation}
+    を得る。
+
+
+  \end{theorem}
+\end{tcolorbox}
+
+
+
 
 
 \end{document}
