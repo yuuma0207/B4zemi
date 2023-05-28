@@ -142,10 +142,33 @@ $r_0$の値はおよそ\SI{1.4}{fm}である。後で見るように、1つの�
       \phi(\bm{r}) = \left.\frac{g}{2\pi r}\frac{ke^{ikr}}{(k^2+m^2c^2/\hbar^2)'}\right|_{k=imc/\hbar} = \frac{g}{4\pi r}e^{-mcr/\hbar}
     \end{equation}
     を得る。
-
-
   \end{theorem}
 \end{tcolorbox}
+
+\newpage
+\section{Nucleon-Nucleon Scattering Phase Shifts}
+核子-核子相互作用によるポテンシャルの表式
+\begin{align}
+  V(r;\,\bm{\sigma}_1,\,\bm{\sigma}_2,\,\bm{\tau}_1,\,\bm{\tau}_2) \;=\; &
+  V_0(r)+V_\sigma(r)\bm{\sigma}_1\cdot\bm{\sigma}_2 + V_\tau(r)\bm{\tau}_1\cdot\bm{\tau}_2
+  + V_{\sigma\tau}(r)\qty(\bm{\sigma}_1\cdot\bm{\sigma}_2)\qty(\bm{\tau}_1\cdot\bm{\tau}_2) \notag                                                    \\
+                                                                         & +V_{LS}(r)\bm{L}\cdot\bm{S} +
+  V_{LS\tau}(r)\qty(\bm{L}\cdot\bm{S})\qty(\bm{\tau}_1\cdot\bm{\tau}_2) \notag                                                                        \\
+                                                                         & +V_{T}(r)S_{12}+V_{T\tau}(r)S_{12}\qty(\bm{\tau}_1\cdot\bm{\tau}_2) \notag \\
+                                                                         & +V_Q(r)Q_{12}+V_{Q\tau}(r)Q_{12}\bm{\tau}_1\cdot\bm{\tau}_2 \notag         \\
+                                                                         & + V_{PP}(r)\qty(\bm{\sigma}_1\cdot\bm{p})\qty(\bm{\sigma}_2\cdot\bm{p})
+  +V_{PP\tau}(r)\qty(\bm{\sigma}_1\cdot\bm{p})\qty(\bm{\sigma}_2\cdot\bm{p})\qty(\bm{\tau}_1\cdot\bm{\tau}_2)
+\end{align}
+は、重陽子の方法と、二核子系の対称性を用いて得られた。さらなる飛躍のためには追加の実験的な情報が必要であり、ある核子が異なるエネルギーを持つ別の核子から散乱されることでもたらされる。
+
+\subsection*{Nucleon-nucleon scattering}
+原理的に、2つの核子を含む4種類の散乱測定が可能である。入射陽子が陽子によって散乱されること($pp$-scattering)は、実験的観点から、4つのうちで最も単純である。
+なぜなら、陽子を加速や、水素（陽子）を含む標的の構築が比較的簡単であるためである。中性子散乱では、入射ビームは大まかに2つの源がある。
+低エネルギーでは、原子炉中の中性子が使われる。高エネルギーでは、例えば、\ce{^{7}Li}を標的とする$(p,\,n)$反応のように、陽子ビームから作られる中性子を使うことができる。
+しかしながら、これらの方法で得られる中性子ビームの強度やエネルギー分解能は、陽子ビームのそれよりもはるかに制限されている。
+その結果、中性子散乱は、一般的に、陽子散乱よりも難しい実験である。
+陽子標的からの中性子散乱($np$-scattering)と、それに準ずる$pn$散乱は、$T=0$チャンネルでも反応が生じるという点で重要である。
+対称的に、$pp-$と$nn-$散乱は2核子系の$T=1$状態の情報しか提供しない。（なぜ？）
 
 
 

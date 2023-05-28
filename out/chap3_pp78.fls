@@ -1446,6 +1446,11 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/japanese-otf/upnmlgothr-v.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/japanese-otf/upnmlgothr-h.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/japanese-otf/upnmlminr-v.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/japanese-otf/upnmlminr-v.tfm
 INPUT out/chap3_pp78.aux
 INPUT out/chap3_pp78.out
 INPUT out/chap3_pp78.out
