@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt,uplatex]{jsarticle}
-\usepackage{report}
+\usepackage{myreport}
 \renewcommand{\thesection}{3-\arabic{section}}
 \title{Chapter3}
 \author{20B01392 松本侑真}
@@ -114,6 +114,7 @@ $r_0$の値はおよそ\SI{1.4}{fm}である。後で見るように、1つの�
     点源がある場合のクライン・ゴルドン方程式
     \begin{equation}
       \laplacian\phi(\bm{r}) = \frac{m^2c^2}{\hbar^2}\phi(\bm{r}) - g\delta(\bm{r})
+      \label{eq:3-611}
     \end{equation}
     のFourier変換を考える。
     以下では、関数$f(\bm{r})$のFourier変換を
@@ -122,7 +123,7 @@ $r_0$の値はおよそ\SI{1.4}{fm}である。後で見るように、1つの�
     \end{equation}
     と定義する。
     $\mathcal{F}[\laplacian f] = -\abs{\bm{k}}^2\mathcal{F}[f]$
-    となることは部分積分から容易に示すことができるため、式\eqref{eq:3-69}の両辺をFourier変換すると
+    となることは部分積分から容易に示すことができ、式\eqref{eq:3-611}の両辺をFourier変換すると
     \begin{equation}
       \mathcal{F}[\phi] = \frac{g}{(2\pi)^3}\frac{1}{k^2+m^2c^2/\hbar^2}
     \end{equation}
@@ -130,6 +131,7 @@ $r_0$の値はおよそ\SI{1.4}{fm}である。後で見るように、1つの�
     \begin{equation}
       \phi(\bm{r}) = \frac{g}{(2\pi)^3}\int_0^\infty dk\frac{k^2}{k^2+m^2c^2/\hbar^2}\int_{-1}^{1}d(\cos\theta) e^{ikr\cos\theta}\int_{0}^{2\pi}d\varphi \,。
     \end{equation}
+    ここで、
     \begin{equation}
       \int_{-1}^{1}d(\cos\theta) e^{ikr\cos\theta} = \frac{1}{ikr}\qty[e^{ikr} - e^{-ikr}]
     \end{equation}
