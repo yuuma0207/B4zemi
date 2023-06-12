@@ -216,6 +216,76 @@ $pn-$と$nn-$散乱から得られる情報は、$np-$と$pp-$散乱から得ら
   \label{fig:3-3}
 \end{figure}
 
+\newpage
+\subsection*{Scattering cross section}
+散乱実験で測定される物理量は、角度$(\theta,\,\phi)$方向の検出器でのカウント回数である。
+カウント率は、
+\begin{itemize}
+  \item 散乱中心から検出器までの立体角
+  \item 入射ビームの強度
+  \item 反応に巻き込まれた標的核の数
+  \item 微分散乱断面積$\dv*{\sigma}{\Omega}$
+\end{itemize}
+に依存する。主要な興味は$\dv*{\sigma}{\Omega}$であり、散乱角と同様にエネルギーの関数である。
+
+非相対論的極限において、一つの粒子が別の粒子によって散乱される現象は、Shr\"{o}dinger方程式によって記述される。
+質量中心において、波動関数は
+\begin{equation}
+  -\frac{\hbar^2}{2\mu}\laplacian\psi + (V-E)\psi=0
+\end{equation}
+の解となっている。ここで、$\mu$は2核子系の換算質量である。
+主に考えるのは短距離核力（\S{B-5}にクーロン散乱が書かれてある）であり、
+その結果、散乱が生じている場所の小さな近傍意外で$V=0$と仮定できる。
+
+$V$がゼロと異なる小さな領域から遠く離れた漸近領域では、波動関数は
+\begin{equation}
+  \psi(r,\,\theta,\,\phi)\xrightarrow[r\to\infty]{} e^{ikz} + f(\theta,\,\phi)\frac{e^{ikr}}{r}
+\end{equation}
+の形をしている。ここで、$e^{ikz}$の項は入射平面波であり、反応によって入射波は影響を受けていないことを表している。
+散乱された波は$e^{ikr}/r$の球面波で表され、散乱中心から放射状に広がる。$(\theta,\,\phi)$方向へ散乱される確率は
+散乱振幅$f(\theta,\,\phi)$で特徴づけられる。簡単にするために、最初は弾性散乱のみを考える。
+その結果、2粒子の質量中心から見ると、波数$k$は散乱前後の大きさが等しい。
+$(\theta,\,\phi)$方向の微分散乱断面積は式(B-7)で与えられ、散乱振幅の2乗で与えられる：
+\begin{equation}
+  \dv{\sigma}{\Omega}(\theta,\,\phi) = \abs{f(\theta,\,\phi)}^2\;。
+\end{equation}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{bibun_sanran_danmenseki.png}
+  \caption{微分散乱断面積の図解}
+  \label{fig:bibun_sanran}
+\end{figure}
+
+図\ref{fig:diagram}にあるように、散乱に関する幾何学は、座標系の原点を散乱の中心として、入射ビームの方向を$z$軸正方向にとる。
+入射波の波数ベクトル$\bm{k}$と、散乱波の波数ベクトル$\bm{k}'$は平面を構成し、それは散乱平面となっている。
+
+もし入射ビーム内の核子と標的内の核子が偏極していない場合、すなわち、固有スピンが整列する空間上の特定の方向が存在しない場合、
+散乱は$z$軸周りの回転に関して不変である。この場合、断面積は方位角$\phi$に依存せず、微分散乱断面積は$\theta$だけの関数となる。
+後に、散乱に関与する1つまたは複数の核子について、内部スピンの向きが検出される場合の一般のケースについて考える。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{diagram_scattering.png}
+  \caption{散乱前後の波数ベクトルと角度について}
+  \label{fig:diagram}
+\end{figure}
+
+\subsection*{Partial-wave analysis}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}

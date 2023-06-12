@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  12 JUN 2023 15:12
+This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  12 JUN 2023 16:53
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1281,17 +1281,23 @@ LaTeX Font Info:    Font shape `JT2/hmc/m/n' will be
 [5]
 File: ./pic//phaseshift.png Graphic file (type bmp)
 <./pic//phaseshift.png>
-[6] (out/chap3_pp78/chap3_pp78.aux)
+[6]
+File: ./pic//bibun_sanran_danmenseki.png Graphic file (type bmp)
+<./pic//bibun_sanran_danmenseki.png>
+[7]
+File: ./pic//diagram_scattering.png Graphic file (type bmp)
+<./pic//diagram_scattering.png>
+[8] (out/chap3_pp78/chap3_pp78.aux)
 Package rerunfilecheck Info: File `chap3_pp78.out' has not changed.
 (rerunfilecheck)             Checksum: 2804CB89B7E1A4C6F8C3DEF9983C3DA7;536.
  ) 
 Here is how much of TeX's memory you used:
- 38283 strings out of 475422
- 777279 string characters out of 5788032
- 1131852 words of memory out of 5000000
- 59438 multiletter control sequences out of 15000+600000
+ 38302 strings out of 475422
+ 777828 string characters out of 5788032
+ 1131942 words of memory out of 5000000
+ 59455 multiletter control sequences out of 15000+600000
  523685 words of font info for 141 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  99i,16n,94p,505b,1252s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/chap3_pp78/chap3_pp78.dvi (6 pages, 33996 bytes).
+Output written on out/chap3_pp78/chap3_pp78.dvi (8 pages, 40052 bytes).
