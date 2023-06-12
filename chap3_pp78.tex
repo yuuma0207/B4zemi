@@ -271,8 +271,45 @@ $(\theta,\,\phi)$方向の微分散乱断面積は式(B-7)で与えられ、散�
 \end{figure}
 
 \subsection*{Partial-wave analysis}
+中心力ポテンシャルのため、2つの散乱核子の相対的な角運動量$\bm{l}$は量子化されて観測される。
+このような状況において、波動関数をそれぞれが$l$の値で定義される異なる部分波の寄与による和として展開するのが便利である：
+\begin{equation}
+  \psi(r,\,\theta)=\sum_{l=0}^{\infty} a_lY_{l0}(\theta)R_l(k,\,r)\;。
+\end{equation}
+ここで、$a_l$は展開係数である。球面調和関数$Y_{lm}(\theta,\,\phi)$において$m=0$のみが現れているのは、
+偏極を無視している場合、波動関数は方位角$\phi$に依存しないためである。
+波動関数がエネルギーに依存することを強調するため、波数$k$を動径方向の関数$R_l(k,\,r)$に陽に含めている。
 
-
+$V=0$の自由粒子の場合、動径波動関数は以下のようになる：
+\begin{equation}
+  R_l(k,\,r)\xrightarrow[]{\text{free}} j_l(kr)\xrightarrow[r\to\infty]{\text{free}} \frac{1}{kr}\sin(kr-l\pi/2)\;。
+\end{equation}
+ここで、$k=\sqrt{2\mu E}/\hbar$であり、$j_l(\rho)$は$l$次の球ベッセル関数である。
+もし、ポテンシャルによって弾性散乱のみが許されているならば、各部分波において、確率密度の流れは保存する。
+ポテンシャルによって波動関数に与える唯一の影響は位相の変化である。言い換えると、
+\begin{equation}
+  R_l(k,\,r)\xrightarrow[r\to\infty]{\text{scatt.}} \frac{1}{kr}\sin(kr-l\pi/2+\delta_l)
+\end{equation}
+となる。ここで、$\delta_l$は$l$番目の部分波の位相のずれである。
+式(B-16)
+\begin{equation}
+  f(\theta)=\frac{\sqrt{4\pi}}{k}\sum_{l=0}^{\infty}\sqrt{2l+1}e^{i\delta}\sin\delta_l Y_{l0}(\theta)
+\end{equation}
+を用いると、散乱振幅を$\delta_l$を用いて評価することができる。
+\begin{equation}
+  \dv{\sigma}{\Omega}(\theta,\,\phi)=\abs{f(\theta,\,\phi)}^2
+\end{equation}
+より、
+\begin{equation}
+  \dv{\sigma}{\Omega} = \frac{4\pi}{k^2}\abs{\sum_{l=0}^{\infty}\sqrt{2l+1}e^{i\delta_l}\sin\delta_l Y_{l0}(\theta)}^2
+\end{equation}
+となる。散乱断面積は、$\dv*{\sigma}{\Omega}$を全立体角で積分したものであるため、
+\begin{equation}
+  \sigma=\int d\Omega \dv{\sigma}{\Omega} = \frac{4\pi}{k^2}\sum_{l=0}^{\infty}(2l+1)\sin^2\delta_l(k)
+\end{equation}
+と計算できる。部分波に展開することは、エネルギーが与えられているときの散乱結果を解析するのに有益である。
+特に、\S{B-2}にあるように低エネルギー散乱では、少しの低次の部分波しか寄与してこない。
+現実の核ポテンシャルでは、軌道角運動量は保存しない。非中心力によって混ざる$l$の数は限られているため、部分波展開は依然として有効である。
 
 
 

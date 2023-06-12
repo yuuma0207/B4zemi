@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  12 JUN 2023 16:53
+This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  12 JUN 2023 17:50
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1287,7 +1287,7 @@ File: ./pic//bibun_sanran_danmenseki.png Graphic file (type bmp)
 [7]
 File: ./pic//diagram_scattering.png Graphic file (type bmp)
 <./pic//diagram_scattering.png>
-[8] (out/chap3_pp78/chap3_pp78.aux)
+[8] [9] (out/chap3_pp78/chap3_pp78.aux)
 Package rerunfilecheck Info: File `chap3_pp78.out' has not changed.
 (rerunfilecheck)             Checksum: 2804CB89B7E1A4C6F8C3DEF9983C3DA7;536.
  ) 
@@ -1300,4 +1300,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  99i,16n,94p,505b,1252s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/chap3_pp78/chap3_pp78.dvi (8 pages, 40052 bytes).
+Output written on out/chap3_pp78/chap3_pp78.dvi (9 pages, 45732 bytes).
