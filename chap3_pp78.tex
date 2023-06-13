@@ -408,12 +408,95 @@ $J$の値は与えられているため、散乱は、与えられたエネル�
 これらはnuclear bar phase shiftsと一般に呼ばれている。
 $J=1$のトリプレット状態なので、図\ref{fig:3-3}(c)に示されている実験データから$\epsilon_1$の値が推測される。
 
+\subsection*{Spin polarization in nucleon-nucleon scattering}
+
+核子ポテンシャルにスピン依存性が存在するため、核子間の散乱断面積は全固有スピンが$S=0,\,1$で異なる。
+$S$を観測するためには、核子の固有スピンの指向性を決定する必要がある。
+それぞれの核子のスピンは$1/2$であるため、量子化軸への射影成分は$+1/2,\,-1/2$のどちらかである。
+もし入射ビーム内の全核子のスピンが特定の方向に整列されたら、そのビームは偏極されているという。
+類似的に、標的粒子のスピンが与えられた方向に沿って整列されていると、標的は偏極されているという。
+スピンの指向性を考慮すると、核子間散乱実験では、終状態と同様にして、始状態においても4つの可能な結合が考えられる。
+これらの4つは$\ket{\pm1/2,\,\pm1/2}$（複合任意）と表される。
+スピンの指向性はスピン依存の相互作用によって変わりうるため、4つの始状態のうちどれかが、4つの終状態のどれかに対応する16通りの異なる
+偏極が観測されうる。
+
+数学的に、散乱振幅は$4\times 4$行列として書かれて、それぞれの要素は散乱の16の取りうる配置の確率を表す。
+これらの16個の量はそれぞれに対して独立であり、5つの要素のみがそれぞれの核子のペア（例えば$np-$や$pp-$散乱）に対して唯一に定まる。
+これは次のように5つの独立した散乱振幅を表すことで見られる：
+\begin{equation}
+  \begin{gathered}
+    f_1  =f_{++,\,++}= f_{--,\,--} \qquad\qquad                    f_2  =f_{++,\,--}=f_{--,\,++}  \\
+    f_3  = f_{+-,\,+-}=f_{-+,\,-+} \qquad\qquad                    f_4  = f_{+-,\,-+}=f_{-+,\,+-} \\
+    f_5  = f_{++,\,+-}=f_{-+,\,--}=f_{--,\,+-}=f_{-+,\,++}                                         \\
+    \quad\; = f_{--,\,-+} = f_{+-,\,++} = f_{++,\,-+} = f_{+-,\,--}
+  \end{gathered}
+\end{equation}
+ここで、$+,\,-$は、始状態、終状態のスピンの射影成分が$+1/2,\,-1/2$ということを表している。
+散乱振幅$f$を使う代わりに、$NN-$散乱を式\eqref{eq:B64}で定義される$t$行列演算子の成分として表す方がより一般的である。
+$t$行列の成分は次式で散乱振幅と関係している：
+\begin{equation}
+  f_{\bm{k'},\,\bm{k}}=-\frac{\mu}{2\pi\hbar^2} \bra{{\bm{k}'}}\bm{t}\ket{{\bm{k}}}\;。
+\end{equation}
+ここで、$\ket{\bm{k}}$と$\ket{\bm{k}'}$はそれぞれ2核子の初期状態と終状態である。
+$f_1$から$f_5$の代わりに、二核子間相互作用の$t$行列は$A,\,B,\,C,\,E,\,F$の5つの係数を持つ関数としてよく書き表される：
+\begin{equation}
+  t_{\bm{k}',\,\bm{k}}(1,\,2)=A+B\bm{\sigma}_n(1)\bm{\sigma}_n(2)
+  + C\qty{\bm{\sigma}_n(1)+\bm{\sigma}_n(2)} + E\bm{\sigma}_q(1)\bm{\sigma}_q(2) + F\bm{\sigma}_p(1)\bm{\sigma}_p(2)\;。
+\end{equation}
 
 
 
-
-
-
+\vskip\baselineskip
+\begin{tcolorbox}[
+    colback = white,
+    colframe = green!35!black,
+    fonttitle = \bfseries]
+  \begin{theorem}[$t$行列について]
+    散乱状態を表すハミルトニアン$\hat{H}$が、自由粒子のハミルトニアン$\hat{H}_0$とポテンシャル項$\hat{V}$の和
+    \begin{equation}
+      \hat{H} = \hat{H}_0 + \hat{V}
+    \end{equation}
+    で表され、固有エネルギーが$E$であるとき、散乱後の状態ベクトル$\ket{\psi}$は以下のLippmann-Schwinger方程式に従う：
+    \begin{equation}
+      \ket{\psi}=\ket{\phi} + \lim_{\epsilon\to 0}\frac{1}{E-\hat{H}_0+i\epsilon}\hat{V}\ket{\psi} \;。
+    \end{equation}
+    Green関数$G(\bm{r},\,\bm{r}')$を
+    \begin{equation}
+      (E-\hat{H}_0)G(\bm{r},\,\bm{r}') = \delta(\bm{r}-\bm{r}')\quad \qty(E=\frac{\hbar^2\bm{k}^2}{2m},\,\hat{H}_0 = -\frac{\hbar^2}{2m}\laplacian)
+    \end{equation}
+    と定義すると、位置座標表示したLS方程式の解は、$\phi(\bm{r})=\bra{\bm{r}}\ket{\phi} = e^{i\bm{k}\cdot\bm{r}}$であるため
+    \begin{equation}
+      \psi(\bm{r})=e^{i\bm{k}\cdot\bm{r}}+\int d^3\bm{r}' G(\bm{r},\,\bm{r}')V(\bm{r'})\psi(\bm{r}')
+    \end{equation}
+    となる。Green関数のフーリエ変換の逆変換を複素積分で求めることで
+    \begin{equation}
+      G(\bm{r},\,\bm{r}') = -\frac{2m}{\hbar^2}\frac{1}{4\pi}\frac{e^{ik\abs{\bm{r}-\bm{r}'}}}{\abs{\bm{r}-\bm{r}'}}
+    \end{equation}
+    を得る。$r\gg r'$の極限を考えると、$\abs{\bm{r}-\bm{r}'}=r-\hat{\bm{r}}\cdot\bm{r}'$であるため、$k>0$のとき、
+    \begin{equation}
+      G(\bm{r},\,\bm{r}')\to -\frac{2m}{\hbar^2}\frac{1}{4\pi}\frac{e^{ikr}}{r}e^{-ik\hat{\bm{r}}\cdot\bm{r}'}
+    \end{equation}
+    となる。ポテンシャルの影響が無視できるほど十分遠い場所における波動関数を見ているため、この近似式を使うと
+    \begin{equation}
+      \psi(\bm{r}) = e^{i\bm{k}\cdot\bm{r}} - \frac{2m}{\hbar^2}\frac{1}{4\pi}\qty[\int d^3\bm{r}' e^{-ik\hat{\bm{r}}\cdot\bm{r}'}V(\bm{r}')\psi(\bm{r}')]\frac{e^{ikr}}{r}
+    \end{equation}
+    となる。$k>0$である散乱後の波動関数を改めて$\psi^{+}_{\bm{k}}(\bm{r})$と書く。Green関数には$k<0$の場合の解も存在するが、これは内向き球面波の解に相当し、$r\to\infty$では存在しない波である。
+    $e^{ik\hat{\bm{r}}\cdot\bm{r}'} = \phi(\bm{r}')$であることから、
+    \begin{equation}
+      \psi(\bm{r}) = e^{i\bm{k}\cdot\bm{r}} - \frac{2m}{\hbar^2}\frac{1}{4\pi}\bra{\phi_{\bm{k'}}}V\ket{\psi^{+}_{\bm{k}}}\frac{e^{ikr}}{r}
+    \end{equation}
+    と表すことができ、散乱振幅は
+    \begin{equation}
+      f(\theta,\,\phi)=- \frac{2m}{\hbar^2}\frac{1}{4\pi}\bra{\phi_{\bm{k'}}}V\ket{\psi^{+}_{\bm{k}}}
+    \end{equation}
+    と求まる。いろいろな目的のために以下の行列要素で定まる$t$行列を用いることが多い：
+    \begin{equation}
+      \bra{\phi_{\bm{k}'}}\bm{t}\ket{\phi_{\bm{k}}} = \bra{\phi_{\bm{k}'}}V\ket{\psi_{\bm{k}}^{+}}\;。
+      \label{eq:B64}
+    \end{equation}
+  \end{theorem}
+\end{tcolorbox}
+\vskip\baselineskip
 
 
 
