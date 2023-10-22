@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  22 OCT 2023 12:41
+This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  22 OCT 2023 13:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1386,11 +1386,11 @@ Package rerunfilecheck Info: File `feynman_chap1.out' has not changed.
 Here is how much of TeX's memory you used:
  34035 strings out of 475422
  667770 string characters out of 5788032
- 958755 words of memory out of 5000000
+ 959755 words of memory out of 5000000
  55011 multiletter control sequences out of 15000+600000
  611420 words of font info for 154 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  128i,12n,122p,489b,1019s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/feynman_chap1/feynman_chap1.dvi (26 pages, 132596 bytes).
+Output written on out/feynman_chap1/feynman_chap1.dvi (26 pages, 132664 bytes).
 

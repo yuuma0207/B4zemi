@@ -182,7 +182,7 @@
   ブランシアードは、小澤の不等式に替わる最もタイトな不等式を見出し、その等号成立条件も明らかにした。
   実際に、ブランシアードの不等式から小澤の不等式を導くこともできる。
   
-  また、小澤が定義した誤差や擾乱の定義を、より物理的に意味のある（？）定義に直して、渡辺・沙川・上田によって不確定性原理が再構築された。
+  また、小澤が定義した誤差や擾乱の定義を、より物理的に意味のある（？）定義に直して、渡辺・沙川・上田の不等式が構築された。
 \end{frame}
 
 
@@ -360,9 +360,9 @@ POVM測定の例として、POVMを射影演算子の組$\{P_m\}_{m\in \mathcal{
     POVM$E=\{E_m\}_{m\in\mathcal{M}},\,F=\{F_n\}_{n\in\mathcal{N}}$に対して、
     あるPOVM$K=\{K_{mn}\}_{m\in\mathcal{M},\,n\in\mathcal{N}}$が存在して、任意の状態$\rho$で
     \begin{equation}
-      \Tr(\rho E_m) = \sum_{n\in\mathcal{N}}\Tr(\rho K_{n}),\quad \Tr(\rho F_n) = \sum_{m\in\mathcal{M}}\Tr(\rho K_{mn})
+      \Tr(\rho E_m) = \sum_{n\in\mathcal{N}}\Tr(\rho K_{mn}),\quad \Tr(\rho F_n) = \sum_{m\in\mathcal{M}}\Tr(\rho K_{mn})
     \end{equation}
-    となるこｔである。これは$\rho$が任意なので
+    となることである。これは$\rho$が任意なので
     \begin{equation}
       E_m = \sum_{n}K_{mn},\quad F_n = \sum_{m}K_{mn}
     \end{equation}
@@ -407,7 +407,7 @@ POVM測定の例として、POVMを射影演算子の組$\{P_m\}_{m\in \mathcal{
   となるため、トレース保存のCP-mapである。このようなCP-mapをTPCP(CPTP)-mapという。
   TPCP-mapを構成する$\Lambda_m$をCP-インストルメントという。また、$\Lambda$がCP-mapである同値条件として、
   \begin{equation}
-    \Lambda(A) = \sum_{k}^{l}V_kAV_k^{\dagger},\qq{$V_k$は線形演算子}
+    \Lambda(A) = \sum_{k=1}^{l}V_kAV_k^{\dagger},\qq{$V_k$は線形演算子}
   \end{equation}
   がある。とくに、CPTP-mapは$\sum_k V_kV_k^{\dagger}=I$という条件を付ければ上のような表現ができ、
   特にKraus表現と呼ぶ。
@@ -438,7 +438,7 @@ POVM測定の例として、POVMを射影演算子の組$\{P_m\}_{m\in \mathcal{
     このとき、
     \begin{align}
       \Pr(M=m\mid \rho) &= \Tr(V_m\rho V_m^{\dagger}) = \Tr(E_m\rho) \\
-      \rho_m & = \frac{E_m\rho E_m}{\Tr(E_m\rho)}
+      \rho_m & = \frac{\sqrt{E_m}\rho \sqrt{E_m}}{\Tr(E_m\rho)}
     \end{align}
     となる。ユニタリ演算子$U$によって$V_m = U\sqrt{E_m}$としても、測定の確率分布は変わらない。しかし、$\rho_m$は変わってしまう。
     つまり、POVMは測定後の状態を一意に決定しないということがわかる。
