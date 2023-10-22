@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  16 OCT 2023 14:45
+This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.11.21)  22 OCT 2023 11:36
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1289,27 +1289,49 @@ LaTeX Font Info:    Font shape `T1/qhv/m/it' will be
 
 ] [9
 
-]
-File: pic/hukakutei.jpg Graphic file (type bmp)
-<pic/hukakutei.jpg>
-
-Overfull \vbox (3.13475pt too high) detected at line 151
- []
-
-[10
+] [10
 
 ] [11
 
 ] [12
 
 ]
-LaTeX Font Info:    Font shape `JT2/hgt/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 181.
-LaTeX Font Info:    Font shape `JY2/hgt/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 181.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 23.38725pt on input line 181.
+File: pic/hukakutei.jpg Graphic file (type bmp)
+<pic/hukakutei.jpg>
+
+Overfull \vbox (3.13475pt too high) detected at line 211
+ []
+
 [13
+
+] [14
+
+] [15
+
+]
+LaTeX Font Info:    Font shape `JT2/hgt/m/n' will be
+(Font)              scaled to size 23.94002pt on input line 241.
+LaTeX Font Info:    Font shape `JY2/hgt/m/n' will be
+(Font)              scaled to size 23.94002pt on input line 241.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 23.38725pt on input line 241.
+[16
+
+] [17
+
+]
+Overfull \vbox (4.39891pt too high) detected at line 283
+ []
+
+[18
+
+]
+Overfull \vbox (1.69948pt too high) detected at line 307
+ []
+
+[19
+
+] [20
 
 ]
 ***** List of packages loaded by `plautopatch': *****
@@ -1329,12 +1351,12 @@ Package rerunfilecheck Info: File `feynman_chap1.out' has not changed.
 (rerunfilecheck)             Checksum: 05B9FF7757FE6A446D8F294B02146D28;54.
  ) 
 Here is how much of TeX's memory you used:
- 33925 strings out of 475422
- 665734 string characters out of 5788032
- 954770 words of memory out of 5000000
- 54915 multiletter control sequences out of 15000+600000
+ 33943 strings out of 475422
+ 666001 string characters out of 5788032
+ 957770 words of memory out of 5000000
+ 54933 multiletter control sequences out of 15000+600000
  611351 words of font info for 158 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  128i,12n,122p,489b,1019s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/feynman_chap1/feynman_chap1.dvi (13 pages, 62612 bytes).
+Output written on out/feynman_chap1/feynman_chap1.dvi (20 pages, 97416 bytes).

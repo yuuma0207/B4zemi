@@ -126,7 +126,67 @@
     \end{itemize}
   \end{block}
 \end{frame}
-\begin{frame}{不確定性原理が述べていること}
+
+\begin{frame}
+  \frametitle{不確定性原理についての背景}
+1927年にHeisenbergの思考実験によって初めて不確定性原理が導かれた。そのときは、
+\begin{equation}
+  \varDelta x \sim \lambda,\, \varDelta p \sim \frac{h}{\lambda}\Rightarrow \varDelta x \varDelta p \sim h
+\end{equation}
+という大雑把な見積もりである。
+しばらくして、ケナードの不等式
+\begin{equation}
+  \sigma(Q)\sigma(P)\geq \frac{\hbar}{2}\qq{（$\sigma(Q)$は$Q$の標準偏差）}
+\end{equation}
+が数学的に導かれた。そのため、Heisenbergはこの不等式に影響を受けて
+\begin{equation}
+  \varDelta x \varDelta p \geq \frac{\hbar}{2}\qq{（間違い）}
+\end{equation}
+と1930年に論文を書いた。これを現代的（より正確な表現を用いて）書くと、
+\begin{equation}
+  \epsilon(Q)\eta(P)\geq \frac{\hbar}{2}\qq{（間違い）}
+\end{equation}
+となるが、この式は厳密に間違っている。ここで、$\epsilon(X)$は物理量$X$の誤差、$\eta(X)$を物理量$X$の擾乱である。
+\end{frame}
+
+\begin{frame}
+  \frametitle{ケナードの不等式の意味}
+  \begin{equation}
+    \sigma(Q)\sigma(P)\geq \frac{\hbar}{2}\qq{（ケナードの不等式）}
+  \end{equation}
+  \begin{itemize}
+    \item  同一の量子状態を大量（例えば1000個）用意する。このうちの500個では$Q$の測定、残りの500個では$P$の測定を行う。
+    \item 誤差がゼロの理想的な測定ができたとする。
+    \item  しかし、どんな量子状態を持ってきても、必ず$Q,\,P$どちらかの物理量の標準偏差（統計的なばらつき）が存在するという主張がケナードの不等式。（厳密に正しい）
+  \end{itemize}
+  この測定は、別々の（同じ）量子状態を用意してそれぞれに対して測定を行っている。
+  同じ系で$P$を測定した後に$Q$を測定するといった同時測定をしているわけではない。
+\end{frame}
+
+\begin{frame}
+  \frametitle{小澤の不等式（2003年）}
+  \begin{equation}
+    \epsilon(Q)\eta(P)+\epsilon(Q)\sigma(P)+\sigma(Q)\eta(P)\geq \frac{\hbar}{2}
+  \end{equation}
+  中性子のスピンを使った実験によって、小澤の不等式が実験的に証明された。
+  この実験は、Heisenbergの不確定性原理を破ったとして話題になった。実際に、
+  \begin{equation}
+    \epsilon(Q)\eta(P)\geq \frac{\hbar}{2}-\qty(\epsilon(Q)\sigma(P)+\sigma(Q)\eta(P))
+  \end{equation}
+  と式変形ができるが、真に$\epsilon(Q)\eta(P) < {\hbar}/{2}$となった実験であるからである。
+  
+  小澤の不等式では、等号成立条件がタイトなものであるかどうかは別問題である。
+  例えば、自明な場合でしか等号が成立しないのであれば、その場合を除いて、より範囲を狭めた不等式が構成できる。
+  そこで、小澤の不等式の等号条件の必要十分条件を明らかにするか、小澤が定義した誤差や擾乱の関数でなるべくタイトな不等式を見つけることが課題となる。
+  
+  ブランシアードは、小澤の不等式に替わる最もタイトな不等式を見出し、その等号成立条件も明らかにした。
+  実際に、ブランシアードの不等式から小澤の不等式を導くこともできる。
+  
+  また、小澤が定義した誤差や擾乱の定義を、より物理的に意味のある（？）定義に直して、渡辺・沙川・上田によって不確定性原理が再構築された。
+\end{frame}
+
+
+\begin{frame}{不確定性原理が述べていること（測定誤差と測定誤差の反作用）}
     \begin{itemize}
       \item スクリーンCの穴1と穴2を通って$x$に到達する電子では、軌道が曲がることによる運動量の変化分が異なる。
       それぞれの穴を通るときの運動量の変化分の差を$\delta p$とする。
@@ -179,6 +239,94 @@
 \end{frame}
 
 \frame{\centering{\Huge{Thank you for your attention!}}}
+
+\begin{frame}
+  \frametitle{Heisenberg-Robertson型の不確定性関係}
+$A,\,B$を任意の物理量、$\ket{\psi}$を任意の状態とする。このとき、
+\begin{equation}
+  \varDelta_{\psi}[A]\varDelta_{\psi}[B]\geq \frac{1}{2}\abs{\bra{\psi}[A,B]\ket{\psi}}
+\end{equation}
+が成り立つ。ここで、$\varDelta_{\psi}[X] = \sqrt{V_{\psi}[X]}$であり、
+$\varDelta_{\psi}[X] = \ev{X^2}{\psi} - \ev{X}{\psi}^2$
+である。また、$[A,B] = AB-BA$である。特に、$[Q,P]=i\hbar$を代入すると、ケナードの不等式が導ける。
+
+\begin{itemize}
+  \item 不確定性関係は、非可換な物理量どうしの同時測定が存在しないことを示している。
+  \item 同時測定とは、2つの物理量の同時確率分布に対してそれぞれの周辺分布がBornの確率規則を満たすこと。つまり、
+  \begin{equation}
+    \ev{P_a}{\psi} = \sum_{b\in B}\Pr(A=a,\,B=b\mid\ket{\psi}),\, \ev{Q_b}{\psi} = \sum_{a\in A}\Pr(A=a,\,B=b\mid\ket{\psi})
+  \end{equation}
+  が成り立つこと。ただし、$P_a,\,Q_b$は$a,\,b$への射影演算子であり、
+  $\ket{\psi}$の状態における$A$の測定の結果が$a$であり、かつ、$B$の測定の結果が$b$である確率を$\Pr(A=a,\,B=b\mid\ket{\psi})$とした。
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{同時測定について}
+  \begin{block}{命題：可換な物理量の同時測定}
+    可換な物理量$A,\,B$は同時測定できる。特に、$\ket{\psi}$の元で$A,\,B$を同時測定したときの同時確率分布は
+  \begin{equation}
+    \Pr(A=a,\,B=b\mid\ket{\psi}) = \ev{P_aQ_b}{\psi}
+  \end{equation}
+  で与えられる。（証明略：同時固有状態が取れることを用いる。）逆も成り立つが、その証明にはPOVMの概念が必要になる。
+  \end{block}
+  \begin{block}{合成系の公理}
+    Hilbert空間$\mathcal{H}_1,\,\mathcal{H}_2$が付随する量子系$S_1,\,S_2$の合成系には、テンソル積Hilbert空間$\mathcal{H}_1\otimes\,\mathcal{H}_2$が付随する。
+    系$S_1$の物理量$A$は合成系では$A\otimes I_2$で表される。$I_2$は$\mathcal{H}_2$上の単位演算子である。$S_2$についても同様である。
+  \end{block}
+  \begin{block}{局所性の要請}
+    系$S_1,\,S_2$が空間的に離れているとき、$A,\,B$の同時測定を「$A,\,B$それぞれを局所的に測定する」ことで実現できる。
+    この測定は測定$A,\,B$の時間順序に依らない。
+  \end{block}
+  
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{一般的な測定を考えるための準備：密度演算子}
+    密度演算子$\rho$の数学的な特徴づけは以下の2つ
+    \begin{equation}
+      \Tr(\rho)=1,\, \rho\geq 0\qq{（正値演算子）}
+    \end{equation}
+    である。物理的な特徴づけとしては、量子状態の準備の確率まで含めた一般的な状態の記述を考える。
+    確率$p_i$で状態$\ket{\psi_i}$を準備するような状態$s$を$s=\{p_i\,;\ket{\psi_i}\}$と表すとする。
+    このような操作を確率混合と言い、$s=\{1,\,\ket{\psi}\}$を純粋状態、そうでない場合を混合状態と呼ぶ。
+    混合状態はHilbert空間の単位ベクトル（$=$状態ベクトル）で表すことができないが、このような状態を記述するのが密度演算子である。
+    状態$s$の元で物理量$A$を測定し、$a$を得る確率は
+    \begin{equation}
+      \Pr(A=a\mid s) = \sum_{i}p_i\Pr(A=a\mid\ket{\psi_i}) = \sum_{i}p_i\ev{P_a}{\psi_i}
+    \end{equation}
+    となる。ここで、密度演算子を
+    \begin{equation}
+      \rho = \sum_{i}p_i\ketbra{\psi_i}
+    \end{equation}
+    と定めると、$\Pr(A=a\mid s) = \Tr(P_a\rho)$となる。
+    また、$s$を構成する確率混合は一意ではないが、$\rho$は$s$に対して一意的に定まる。
+    さらに、$A$は任意であったため、$\rho$は系の状態を完全に記述していることがわかる。
+    （全ての物理量で同じ確率分布を与える状態は同じ$\rho$）
+\end{frame}
+
+\begin{frame}
+  \frametitle{一般的な測定が満たすべき性質：アフィン性}
+    測定とは、状態に対して物理量の確率分布を与えるもの、すなわち、
+    \begin{equation}
+      f_m\colon \rho \mapsto \Pr(M=m\mid \rho)
+    \end{equation}
+    という関数$f_m$の集まりを測定と思ってよい。状態は確率混合（状態の凸結合）
+    \begin{equation}
+      \rho = p\rho_1 + (1-p)\rho_2
+    \end{equation}
+    に対して閉じているため、測定もこの構造を保つ必要があるだろう。すなわち、
+    \begin{equation}
+      \Pr(M=m\mid p\rho_1+(1-p)\rho_2) = p\Pr(M=m\mid \rho_1)+(1-p)\Pr(M=m\mid \rho_2)
+    \end{equation}
+    を満たさなければならない、と考えられる。
+    このように、凸結合を保つような性質を一般にアフィン性といい、その写像をアフィン写像という。
+    \begin{block}{測定$M$の必要条件}
+      測定値の集合$\mathcal{M}$を有し、状態$\rho$の下でその測定を行うと、測定値$m\in\mathcal{M}$を得る確率が定まっており、
+      アフィン性を満たす。
+    \end{block}
+\end{frame}
 
 
 
