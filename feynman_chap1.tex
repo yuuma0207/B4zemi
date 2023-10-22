@@ -1,5 +1,5 @@
 \RequirePackage{plautopatch}
-\documentclass[11pt,aspectratio=169,xcolor=dvipsnames,table,dvipdfmx]{beamer}
+\documentclass[10pt,aspectratio=169,xcolor=dvipsnames,table,dvipdfmx]{beamer}
 \usepackage{mybeamer}
 %タイトル
 \title{Feynman-Hibbs「経路積分と量子力学」}
@@ -328,6 +328,133 @@ $\varDelta_{\psi}[X] = \ev{X^2}{\psi} - \ev{X}{\psi}^2$
     \end{block}
 \end{frame}
 
+\begin{frame}
+  \frametitle{POVM測定}
+  \begin{alertblock}{量子系における測定}
+    アフィン性を満たす任意の測定は、POVM測定で記述される。また、POVM測定はアフィン性を満たす。
+    すなわち、POVM測定は量子系における測定の一般的な枠組みである。
+  \end{alertblock}
+  まず、POVM(Positive Operator Vaued Measure)とは、線形演算子の組$\{E_m\in \mathcal{L}(\mathcal{H})\}_{m\in \mathcal{M}}$であって、
+  $E_m\geq 0$かつ$\sum_m E_m = I$を満たすものをいう。それぞれの$E_m$をPOVM要素という。
+  
+  \begin{block}{POVM測定（射影測定の一般化）}
+    量子系での測定$M$がPOVM測定とは、状態$\rho$の下で、測定値$m\in \mathcal{M}$を得る確率が、とあるPOVM$\{E_m\}_{m\in\mathcal{M}}$
+    を用いて
+    \begin{equation}
+      \Pr(M=m\mid \rho) = \Tr(E_m\rho)
+    \end{equation}
+    で与えられるものをいう。
+  \end{block}
+POVM測定の例として、POVMを射影演算子の組$\{P_m\}_{m\in \mathcal{M}}$としたものがある。これによるPOVM測定をPVM測定という。
+\textbf{PVM測定はエルミート演算子の測定と等価である。}
+\footnote{任意のPOVM測定は\textbf{間接測定}によって物理的に実現可能であることも示すことができる。
+具体的には、着目系$S$の任意のPOVM$E$を固定したとき、任意の状態$\rho$に対して、
+環境系のHilbert空間$\mathcal{H_A}$、環境系の（純粋）状態$\sigma$、全体系$\mathcal{H}_S\otimes \mathcal{H}_A$上のユニタリ演算子$U$、
+間接測定に用いるメーター物理量$B=\sum_{m}mP_m\in \mathcal{L}(\mathcal{H}_A)$が存在する。}
+\end{frame}
+
+\begin{frame}
+  \frametitle{POVMを用いた同時測定の必要十分条件}
+  POVMを用いると、同時測定の定義を以下のように書き直すことができる。
+  \begin{block}{POVMによる同時測定}
+    POVM$E=\{E_m\}_{m\in\mathcal{M}},\,F=\{F_n\}_{n\in\mathcal{N}}$に対して、
+    あるPOVM$K=\{K_{mn}\}_{m\in\mathcal{M},\,n\in\mathcal{N}}$が存在して、任意の状態$\rho$で
+    \begin{equation}
+      \Tr(\rho E_m) = \sum_{n\in\mathcal{N}}\Tr(\rho K_{n}),\quad \Tr(\rho F_n) = \sum_{m\in\mathcal{M}}\Tr(\rho K_{mn})
+    \end{equation}
+    となるこｔである。これは$\rho$が任意なので
+    \begin{equation}
+      E_m = \sum_{n}K_{mn},\quad F_n = \sum_{m}K_{mn}
+    \end{equation}
+    と等価である。
+  \end{block}
+  POVMを用いた同時測定によって、「物理量$A,\,B$が同時測定できるならば、物理量$A,\,B$は可換である」が示される。
+  以上より同時測定の必要十分条件が示される：
+  \begin{block}{定理：同時測定の必要十分条件}
+    物理量$A,\,B$は可換であるとき、そのときに限り同時測定可能である。
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{測定に関するあれこれのまとめ}
+  \begin{itemize}
+    \item Heisenbergの思考実験による位置と運動量の不確定性関係は、測定誤差と測定の反作用に由来するものである。（小澤の不等式など）
+    \item 同じ系のコピーを大量に用意して誤差と反作用が存在しない理想測定ができたとしても、Robertson型の不確定性関係（ケナードの不等式）は成り立つ。
+    \item 物理量の「同時測定」とは、「同時確率分布から求めたそれぞれの周辺分布がBornの確率規則に従う」ことであり、測定の「同時性」ではない。
+    \item 同時測定ができるとき、そのときに限り、物理量は可換である。
+    \item 量子論の枠組みの中で最も一般的な（測定後の状態の情報を気にしない）測定
+    \footnote{ある物理量を測定した後に、続けて他の物理量を測定することを継続測定という。
+    POVM測定では物理量を測定した後の状態の情報を得られないため、継続測定は行えない。
+    測定後の状態まで情報を得るためには、CP-インストルメント（測定演算子）による測定を行う必要がある。
+    Von Neumannの射影仮説は、物理量の測定後の状態を射影演算子によって記述できるという仮説であるが、測定演算子による測定から導ける。}
+    はPOVM測定であり、物理的に実現可能である。とくに、PVM測定は射影測定と等価である。
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{最も一般的な測定：CP-インストルメント（測定演算子）による測定}
+  POVM測定は、物理量のとある測定値の確率分布を得るものであり、測定後の状態は得ることができない。
+  そのため、測定過程まで含めた測定が最も一般的な測定である。状態$\rho$による測定$M$によって値$m$が得られた後の状態を$\rho_m$とする。
+  このとき、アフィン性を満たし、かつ完全正写像（CP-map）である写像$\Lambda_m\colon \mathcal{S}(\mathcal{H})\mapsto \mathcal{L}(\mathcal{H})$を
+  \begin{equation}
+    \Lambda_m\colon \rho \mapsto \rho_m' = \Pr(M=m\mid \rho)\rho_m
+  \end{equation}
+  と定める。ざっくりいうと、測定前の状態から測定後の状態を与えるような写像である。（規格化しないことによってアフィン性を満たす。）
+  また、$\Lambda(\rho)\coloneqq \sum_m \Lambda_{m}(\rho)$とすると、
+  \begin{equation}
+    \Tr(\Lambda(\rho)) = \sum_{m}\Tr(\rho) = \sum_{m}\Pr(M=m\mid \rho) = 1 = \Tr(\rho)
+  \end{equation}
+  となるため、トレース保存のCP-mapである。このようなCP-mapをTPCP(CPTP)-mapという。
+  TPCP-mapを構成する$\Lambda_m$をCP-インストルメントという。また、$\Lambda$がCP-mapである同値条件として、
+  \begin{equation}
+    \Lambda(A) = \sum_{k}^{l}V_kAV_k^{\dagger},\qq{$V_k$は線形演算子}
+  \end{equation}
+  がある。とくに、CPTP-mapは$\sum_k V_kV_k^{\dagger}=I$という条件を付ければ上のような表現ができ、
+  特にKraus表現と呼ぶ。
+\end{frame}
+
+\begin{frame}
+  \frametitle{CP-インストルメントと測定演算子}
+  CP-インストルメント$\Lambda_m$は、$l_m\leq d_Ad_B$個の測定演算子$V_{k}^{(m)}\colon \mathcal{H}_A\mapsto \mathcal{H}_B$を用いて
+  \begin{equation}
+    \Lambda_m(\rho) = \sum_{k=1}^{l_m}V_{k}^{(m)}\rho V_{k}^{(m)\dagger}
+  \end{equation}
+  と表現できる。したがって、測定演算子の組を持ってきて、測定の確率分布
+  \begin{equation}
+    \Pr(M=m\mid \rho) = \Tr(\Lambda_m(\rho)) = \sum_{k=1}^{l_m}\Tr(V_{k}^{(m)}\rho V_{k}^{(m)\dagger})
+  \end{equation}
+  を与えることができる。また、測定後の状態は
+  \begin{equation}
+    \rho_m = \frac{\Lambda_m(\rho)}{\Pr(M=m\mid \rho)} = \frac{\sum_{k=1}^{l_m}V_{k}^{(m)}\rho V_{k}^{(m)\dagger}}{\sum_{k=1}^{l_m}\Tr(V_{k}^{(m)}\rho V_{k}^{(m)\dagger})}
+  \end{equation}
+  と求まる。このように、測定演算子を用いると、測定後の状態を求めることができる。さらに、測定演算子による測定の結果はCP-インストルメントによる測定と等価であることも示される。
+  そして、任意のCP-インストルメントは間接測定によって物理的に実現できることも示される。
+\end{frame}
+
+\begin{frame}
+  \frametitle{測定演算子の例}
+  \begin{itemize}
+    \item POVM測定は、測定演算子による測定から導ける。$V_m = \sqrt{E_m}$とすると、$\{V_m\}_{m\in \mathcal{M}}$は測定演算子の組となっている。
+    このとき、
+    \begin{align}
+      \Pr(M=m\mid \rho) &= \Tr(V_m\rho V_m^{\dagger}) = \Tr(E_m\rho) \\
+      \rho_m & = \frac{E_m\rho E_m}{\Tr(E_m\rho)}
+    \end{align}
+    となる。ユニタリ演算子$U$によって$V_m = U\sqrt{E_m}$としても、測定の確率分布は変わらない。しかし、$\rho_m$は変わってしまう。
+    つまり、POVMは測定後の状態を一意に決定しないということがわかる。
+    \item $V_m = P_m = P_m^{\dagger} = P_m^2$とすると、$\{V_m\}_{m\in \mathcal{M}}$は測定演算子の組となっている。
+    このとき、
+    \begin{align}
+      \Pr(M=m\mid \rho) &= \Tr(V_m\rho V_m^{\dagger}) = \Tr(P_m\rho P_m) = \Tr(P_m\rho) \\
+      \rho_m & = \frac{P_m\rho P_m}{\Tr(P_m\rho)}
+    \end{align}
+    となる。これは、Von Neumannの射影仮説の一般化となっている。$\rho=\ketbra{\psi}$とすると、それを再現できる。
+  \end{itemize}
+
+ 
+  
+
+\end{frame}
 
 
 
